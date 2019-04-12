@@ -1,3 +1,5 @@
 export default interface ConfIntl {
-  get(): any
+  configs: Record<string, any>
+
+  get(key: string): any
 }
