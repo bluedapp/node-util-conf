@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register ./test/**/*.spec.ts",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
     "build": "rm -rf dist && tsc",
     "watch": "tsc -w",
     "lint": "bash ./scripts/lint-staged-files.sh",
