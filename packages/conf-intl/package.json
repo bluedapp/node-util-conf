@@ -1,5 +1,5 @@
 {
-  "name": "@blued/conf-intl",
+  "name": "@blued-core/conf-intl",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
