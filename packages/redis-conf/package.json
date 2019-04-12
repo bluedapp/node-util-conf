@@ -1,5 +1,5 @@
 {
-  "name": "@blued/redis-conf",
+  "name": "@blued-core/redis-conf",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
