@@ -1,8 +1,8 @@
 {
   "name": "@blued-core/redis-conf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.spec.ts",
     "build": "rm -rf dist && tsc",
@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@blued-core/conf-intl": "0.0.3",
-    "@blued-core/qconf": "0.0.1",
+    "@blued-core/qconf": "0.0.4",
     "typescript": "^3.4.3"
   },
   "devDependencies": {
