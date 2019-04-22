@@ -1,5 +1,5 @@
-export default interface ConfIntl {
-  configs: Record<string, any>
+export default interface ConfIntl<T extends any = any, ConfigItem extends any = any> {
+  configs: Record<string, ConfigItem>
 
-  get(key: string): any
+  get(key: string): T
 }
