@@ -1,10 +1,15 @@
 import ConfIntl from '@blued-core/conf-intl'
 import { Qconf } from '@blued-core/qconf'
 
-export class QconfConf implements ConfIntl {
+export type QconfConfInstance = string | null
+
+export type QconfConfItem = {
+  qconf: string
+} | string
+export class QconfConf implements ConfIntl<QconfConfInstance, QconfConfItem> {
   private qconf: Qconf
 
-  constructor(public configs: Record<string, any>) {
+  constructor(public configs: Record<string, QconfConfItem>) {
     this.qconf = new Qconf(configs)
   }
 
@@ -13,10 +18,10 @@ export class QconfConf implements ConfIntl {
   }
 }
 
-export class QconfHost implements ConfIntl {
+export class QconfHost implements ConfIntl<QconfConfInstance, QconfConfItem> {
   private qconf: Qconf
 
-  constructor(public configs: Record<string, any>) {
+  constructor(public configs: Record<string, QconfConfItem>) {
     this.qconf = new Qconf(configs)
   }
 
