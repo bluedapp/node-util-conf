@@ -1,14 +1,5 @@
-import ConfIntl from '@blued-core/conf-intl'
+import ConfIntl, { MysqlConfInstance } from '@blued-core/conf-intl'
 import { Qconf } from '@blued-core/qconf'
-
-export interface MysqlConfInstance {
-  masterHost: string
-  slaveHost: string[]
-  username: string
-  password: string
-  database: any
-  modelPath: any
-}
 
 export interface MysqlConfItem {
   qconf: string
