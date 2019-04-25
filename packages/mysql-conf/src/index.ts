@@ -1,4 +1,4 @@
-import ConfIntl, { MysqlConfInstance } from '@blued-core/conf-intl'
+import ConfIntl from '@blued-core/conf-intl'
 import { Qconf } from '@blued-core/qconf'
 
 export interface MysqlConfItem {
@@ -7,7 +7,8 @@ export interface MysqlConfItem {
   modelPath?: string
 }
 
-export class MysqlConf implements ConfIntl<MysqlConfInstance, MysqlConfItem> {
+// TODO 移除两个范型
+export class MysqlConf implements ConfIntl {
   private qconf: Qconf
 
   constructor(public configs: Record<string, MysqlConfItem>) {
