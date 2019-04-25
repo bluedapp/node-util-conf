@@ -1,16 +1,11 @@
-import ConfIntl from '@blued-core/conf-intl'
+import ConfIntl, { HostPortConfInstance } from '@blued-core/conf-intl'
 import { Qconf } from '@blued-core/qconf'
-
-export interface RedisConfInstance {
-  host: string
-  port: string
-}
 
 export type RedisConfItem = {
   qconf: string
 } | string
 
-export class RedisConf implements ConfIntl<RedisConfInstance, RedisConfItem> {
+export class RedisConf implements ConfIntl<HostPortConfInstance, RedisConfItem> {
   private qconf: Qconf
 
   constructor(public configs: Record<string, RedisConfItem>) {
