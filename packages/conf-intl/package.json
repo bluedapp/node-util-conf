@@ -1,6 +1,6 @@
 {
   "name": "@blued-core/conf-intl",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
