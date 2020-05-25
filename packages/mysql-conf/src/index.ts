@@ -5,6 +5,8 @@ export interface MysqlConfItem {
   qconf: string
   database: string
   modelPath?: string
+  timezone?: string
+  maxPoolCount?: number
 }
 
 // TODO 移除两个范型
@@ -16,6 +18,10 @@ export class MysqlConf implements ConfIntl {
   }
 
   get(key: string) {
-    return this.qconf.getMysqlConf(key)
+    const conf: any = this.qconf.getMysqlConf(key)
+    const { timezone, maxPoolCount } = this.configs[key]
+    if (timezone) conf.timezone = timezone
+    if (maxPoolCount) conf.maxPoolCount = maxPoolCount
+    return conf
   }
 }
